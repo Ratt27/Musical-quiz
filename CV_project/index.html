@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musical Quiz</title>
+  <link rel="stylesheet" href="cvproj.css" />
+</head>
+<body class="fullbg">
+
+  <!-- Navigation Bar -->
+  <div class="nav">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goQuiz()">Quiz</button>
+    <button onclick="goScore()">Score</button>
+  </div>
+
+  <!-- Header Section -->
+  <div class="c1">
+    <h1>MUSICALLY</h1>
+    <div class="hrline1"></div>
+    <p>Choose a card to start</p>
+    <div class="hrline1"></div>
+  </div>
+
+  <!-- Quiz Category Cards -->
+  <div class="c2">
+    <div class="card1" onclick="openquiz('Indian_classical')">
+      <img src="./indian-classical-music2.jpg" alt="Indian classical music">
+    </div>
+    <div class="card2" onclick="openquiz('Indian_folk')">
+      <img src="./folk2jpg.jpg" alt="Indian folk music">
+    </div>
+    <div class="card3" onclick="openquiz('Rabindrasangeet')">
+      <img src="./rabindra.jpg" alt="Rabindrasangeet">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const openquiz = (quizName) => {
+      localStorage.clear();
+      localStorage.setItem('quizType', quizName);
+      localStorage.setItem('questionNumber', 1);
+      localStorage.setItem('score', 0);
+      window.location.href = "cvproj2.html";
+    };
+
+    const goHome = () => window.location.href = "cvproj.html";
+    const goQuiz = () => window.location.href = "cvproj2.html";
+    const goScore = () => window.location.href = "score.html";
+  </script>
+</body>
+</html>
