@@ -114,8 +114,9 @@ function previousquestion() {
 
 function quitquiz() {
   localStorage.clear();
-  window.location.href = "cvproj2.html";
+  window.location.href = "index.html";
 }
 
 window.onload = loadQuestion;
+
 
